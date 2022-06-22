@@ -16,7 +16,6 @@ function createBook(id, title, author, price, rating = []) {
       this.rating.push(stars);
     },
     getRating() {
-      console.log(rating);
       return (
         this.rating
           .map((n) => {
