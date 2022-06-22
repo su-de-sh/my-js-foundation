@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
-
-const paris = 'paris';
-const france = 'france';
+const paris = "paris";
+const france = "france";
 const marsielle = france;
 
 const vacationSpots = (spot1, spot2) => {
