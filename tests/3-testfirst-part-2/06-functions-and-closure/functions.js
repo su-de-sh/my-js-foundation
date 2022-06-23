@@ -61,3 +61,15 @@ function createObjectWithClosures() {
 
   return obj;
 }
+
+function dontSpillTheBeans(msg) {
+  const obj = {
+    getSecret() {
+      return msg;
+    },
+    setSecret(secretMsg) {
+      msg = secretMsg;
+    },
+  };
+  return obj;
+}
