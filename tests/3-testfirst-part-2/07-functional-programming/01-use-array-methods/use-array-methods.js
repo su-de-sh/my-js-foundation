@@ -19,3 +19,9 @@ function swapCase(sentence) {
     })
     .join(" ");
 }
+
+function extensionSearch(text, array) {
+  return array.filter((n) => {
+    return n.match(text);
+  });
+}
