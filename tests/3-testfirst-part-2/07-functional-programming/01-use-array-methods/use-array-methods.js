@@ -5,3 +5,17 @@ function indexAndValue(array) {
     return { index: i, value: n };
   });
 }
+
+function capitalize(string) {
+  return string.toUpperCase();
+}
+function swapCase(sentence) {
+  return sentence
+    .split(" ")
+    .map((n, i) => {
+      if (i % 2 === 0) {
+        return capitalize(n);
+      } else return n;
+    })
+    .join(" ");
+}
