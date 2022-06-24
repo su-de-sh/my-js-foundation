@@ -25,3 +25,19 @@ filter = (array, callback) => {
   }
   return newArr;
 };
+
+// includes
+
+includes = (collection, element) => {
+  if (Array.isArray(collection)) {
+    for (let i = 0; i < collection.length; i++) {
+      if (collection[i] === element) return true;
+    }
+    return false;
+  } else {
+    for (let keys in collection) {
+      if (collection[keys] === element) return true;
+    }
+    return false;
+  }
+};
