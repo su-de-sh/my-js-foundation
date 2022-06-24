@@ -25,3 +25,13 @@ function extensionSearch(text, array) {
     return n.match(text);
   });
 }
+
+function getPopulation(arrayOfCountries, myCountry) {
+  return arrayOfCountries
+    .filter((n) => {
+      return myCountry.includes(n);
+    })
+    .reduce((a, b) => {
+      return a.population + b.population;
+    }, 0);
+}
