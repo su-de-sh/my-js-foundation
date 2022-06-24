@@ -60,7 +60,27 @@ function reduce(array, startingValue, callback) {
   }
   return result;
 }
-
+// sum
 function sum(array) {
   return array.reduce((a, b) => a + b);
+}
+
+// every
+
+function every(array, callback) {
+  let result = true;
+  for (let i = 0; i < array.length; i++) {
+    result = result && callback(array[i]);
+  }
+  return result;
+}
+
+// some
+
+function some(array, callback) {
+  let result = false;
+  for (let i = 0; i < array.length; i++) {
+    result = result || callback(array[i]);
+  }
+  return result;
 }
