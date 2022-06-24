@@ -41,3 +41,26 @@ includes = (collection, element) => {
     return false;
   }
 };
+
+// countword
+
+function countWords(startingCount, string) {
+  string.split(" ").forEach((n) => {
+    startingCount += 1;
+  });
+  return startingCount;
+}
+
+// reduce
+
+function reduce(array, startingValue, callback) {
+  let result = startingValue;
+  for (let i = 0; i < array.length; i++) {
+    result = callback(result, array[i]);
+  }
+  return result;
+}
+
+function sum(array) {
+  return array.reduce((a, b) => a + b);
+}
