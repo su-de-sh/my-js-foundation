@@ -27,11 +27,16 @@ function extensionSearch(text, array) {
 }
 
 function getPopulation(arrayOfCountries, myCountry) {
-  return arrayOfCountries
-    .filter((n) => {
-      return myCountry.includes(n);
-    })
-    .reduce((a, b) => {
-      return a.population + b.population;
+  if (myCountry.length === 0) {
+    return arrayOfCountries.reduce((a, b) => {
+      return a + b.population;
     }, 0);
+  } else
+    return arrayOfCountries
+      .filter((n) => {
+        return myCountry.includes(n.name);
+      })
+      .reduce((a, b) => {
+        return a + b.population;
+      }, 0);
 }
