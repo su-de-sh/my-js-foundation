@@ -40,3 +40,19 @@ function getPopulation(arrayOfCountries, myCountry) {
         return a + b.population;
       }, 0);
 }
+
+function keyifyArrayOfObjects(key, array) {
+  let myObject = {};
+  array.forEach((n) => {
+    myObject[n[key]] = n;
+  });
+  console.log(myObject);
+  return myObject;
+}
+
+// console.log(
+//   keyifyArrayOfObjects("alias", [
+//     { name: "joe", alias: "joe" },
+//     { name: "joe", alias: "joe" },
+//   ])
+// );
