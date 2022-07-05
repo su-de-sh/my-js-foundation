@@ -101,3 +101,13 @@ function separateAndReturnNames(array, name, len) {
       return element[name];
     });
 }
+
+function priorityTodoDuration(todoList) {
+  return todoList
+    .filter((item) => {
+      return item.priority === "high";
+    })
+    .reduce((a, b) => {
+      return a + b.duration;
+    }, 0);
+}
