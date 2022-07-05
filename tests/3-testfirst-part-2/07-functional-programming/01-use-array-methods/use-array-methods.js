@@ -86,3 +86,18 @@ function inYourBudget(budget, array) {
       return element.item;
     });
 }
+
+function separateAndReturnNames(array, name, len) {
+  array.map((element) => {
+    element.firstName = element.name.split(" ")[0];
+    element.lastName = element.name.split(" ")[1];
+  });
+
+  return array
+    .filter((element) => {
+      return element[name].length <= len;
+    })
+    .map((element) => {
+      return element[name];
+    });
+}
