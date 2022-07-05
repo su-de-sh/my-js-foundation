@@ -68,3 +68,21 @@ function mapReduce(array, callback) {
     return a;
   }, []);
 }
+
+function filterReduce(array, callback) {
+  return array.reduce((a, b) => {
+    if (callback(b)) a.push(b);
+    return a;
+  }, []);
+}
+
+function inYourBudget(budget, array) {
+  return array
+    .filter((element) => {
+      return element.price <= budget;
+      inYourBudget;
+    })
+    .map((element) => {
+      return element.item;
+    });
+}
