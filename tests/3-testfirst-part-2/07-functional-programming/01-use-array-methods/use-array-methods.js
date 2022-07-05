@@ -55,3 +55,16 @@ function powerLevelAverage(array) {
     }, 0) / array.length
   );
 }
+
+// function mapReduce(array, callback) {
+//   return array.reduce((a, b) => {
+//     return a + callback(b);
+//   }, 0);
+// }
+
+function mapReduce(array, callback) {
+  return array.reduce((a, b) => {
+    a.push(callback(b));
+    return a;
+  }, []);
+}
