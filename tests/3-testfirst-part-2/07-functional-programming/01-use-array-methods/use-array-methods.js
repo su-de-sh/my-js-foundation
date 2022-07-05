@@ -47,3 +47,11 @@ function keyifyArrayOfObjects(key, array) {
     return a;
   }, {});
 }
+
+function powerLevelAverage(array) {
+  return Math.floor(
+    array.reduce((a, b) => {
+      return a + b.powerLevel;
+    }, 0) / array.length
+  );
+}
