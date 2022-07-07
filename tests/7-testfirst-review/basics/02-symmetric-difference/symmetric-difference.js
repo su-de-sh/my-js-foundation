@@ -16,9 +16,6 @@ function difference(arrayA, arrayB) {
     return !arrayB.includes(element);
   });
 }
-arrayA.filter((element) => {
-  return !arrayB.includes(element);
-});
 
 function symmetricDiff(arrayA, arrayB) {
   let A = difference(arrayA, arrayB);
