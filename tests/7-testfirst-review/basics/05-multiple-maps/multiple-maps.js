@@ -5,7 +5,6 @@ function multipleMaps(array, mapArray) {
     for (let i of mapArray) {
       if (i[element] !== undefined) {
         return i[element];
-        break;
       }
     }
   });
